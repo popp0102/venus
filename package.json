@@ -5,12 +5,13 @@
   "type": "module",
   "scripts": {
     "dev": "vite --config config/vite.config.ts public",
-    "build": "tsc -b config/tsconfig.json && vite build --config config/vite.config.ts --mode production",
+    "build": "npm run clean && tsc -b config/tsconfig.json && vite build --config config/vite.config.ts --mode production",
     "lint": "eslint .",
     "preview": "vite preview --config config/vite.config.ts",
     "prepublishOnly": "npm run build",
     "tests": "jest --config config/jest.config.ts",
-    "coverage": "jest --config config/jest.config.ts --coverage --collectCoverageFrom='lib/**/*.{ts,tsx,js,jsx}'"
+    "coverage": "jest --config config/jest.config.ts --coverage --collectCoverageFrom='lib/**/*.{ts,tsx,js,jsx}'",
+    "clean": "rm -rf dist"
   },
   "devDependencies": {
     "@babel/preset-typescript": "^7.27.0",

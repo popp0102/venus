@@ -1,10 +1,9 @@
 import { defineConfig } from 'vite'
 import { resolve } from 'path'
 import react from '@vitejs/plugin-react'
-import libCss from 'vite-plugin-libcss';
+import libCss from 'vite-plugin-libcss'
 
-// <https://vitejs.dev/config/>
-export default defineConfig({
+export default defineConfig(({ mode }) => ({
   plugins: [react(), libCss()],
   resolve: {
     alias: {
@@ -12,9 +11,10 @@ export default defineConfig({
       '@util': resolve(__dirname, '../lib/util'),
       '@hooks': resolve(__dirname, '../lib/hooks'),
       '@components': resolve(__dirname, '../lib/components'),
-    } },
+    }
+  },
   define: {
-    'process.env.NODE_ENV': JSON.stringify(mode), // 🛠️ Critical line to fix runtime
+    'process.env.NODE_ENV': JSON.stringify(mode),
   },
   build: {
     sourcemap: true,
@@ -32,4 +32,4 @@ export default defineConfig({
       },
     },
   },
-})
+}))
