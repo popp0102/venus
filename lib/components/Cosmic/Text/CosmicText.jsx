@@ -14,10 +14,19 @@ export default function CosmicText({ text, className='', randomColor=false }) {
   return (
     <p className={`${className} cosmic-text`}>
       {characters.map((char, index) => {
-        let cosmicIndex = (startIndex + index) % numCosmicColors;
+        const cosmicIndex = (startIndex + index) % numCosmicColors;
+
+        if (typeof char !== 'string') {
+          console.error("❌ BAD CHAR:", char, "typeof:", typeof char);
+        }
 
         return (
-          <span style={{"color": `var(${COSMIC_CSS_COLORS[cosmicIndex]})`}} key={index}>{char}</span>
+          <span
+            style={{ color: `var(${COSMIC_CSS_COLORS[cosmicIndex]})` }}
+            key={index}
+          >
+            {char}
+          </span>
         );
       })}
     </p>
