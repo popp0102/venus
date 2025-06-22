@@ -1,3 +1,3 @@
-import Venus from './components/Venus';
+import CosmicText from "./components/Cosmic/Text/CosmicText";
 
-export default Venus;
+export { CosmicText };
