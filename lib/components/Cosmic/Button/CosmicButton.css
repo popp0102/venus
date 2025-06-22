@@ -1,0 +1,21 @@
+.cosmic-button {
+  border-radius: 8px;
+  padding: 0.25rem;
+  height: 3rem;
+  width: 100%;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  font-family: var(--cosmic-main-font);
+
+
+  color: var(--cosmic-cobalt);
+  background-image: linear-gradient(30deg, var(--cosmic-cobalt), var(--cosmic-purple), var(--cosmic-magenta));
+
+  &:hover {
+    background: var(--cosmic-black);
+    color: var(--cosmic-yellow);
+  }
+}
+
+
