@@ -1,4 +1,4 @@
-import { CosmicText } from '../Text/CosmicText';
+import CosmicText from '../Text/CosmicText';
 
 import './CosmicTitle.css';
 
@@ -7,5 +7,3 @@ export default function CosmicTitle({ children }) {
     <CosmicText className="cosmic-title" text={children} randomColor/>
   );
 }
-
-
