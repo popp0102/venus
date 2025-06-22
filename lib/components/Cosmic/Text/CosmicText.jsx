@@ -7,6 +7,10 @@ export default function CosmicText({ text, className='', randomColor=false }) {
   const numCosmicColors = COSMIC_CSS_COLORS.length;
   const startIndex = randomColor ? Math.floor((Math.random() * numCosmicColors)) : 0;
 
+  console.log("🔥 CosmicText text prop:", text, "typeof:", typeof text);
+  console.log("🔥 Is this a string?", typeof text === 'string');
+  console.log("🔥 Is this a valid React element?", text && typeof text === 'object' && '$$typeof' in text);
+
   return (
     <p className={`${className} cosmic-text`}>
       {characters.map((char, index) => {
