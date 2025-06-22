@@ -1,10 +1,6 @@
-import { useNavigate } from 'react-router-dom';
-
 import './CosmicButton.css';
 
-export default function CosmicButton({label, onClick, className, type, navigateTo=null}) {
-  const navigate = useNavigate();
-
+export default function CosmicButton({label, onClick, className, type}) {
   function handleClick() {
     if (navigateTo) {
       navigate(navigateTo);
@@ -25,5 +21,3 @@ export default function CosmicButton({label, onClick, className, type, navigateT
     </button>
   );
 }
-
-
