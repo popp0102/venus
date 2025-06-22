@@ -13,6 +13,9 @@ export default defineConfig({
       '@hooks': resolve(__dirname, '../lib/hooks'),
       '@components': resolve(__dirname, '../lib/components'),
     } },
+  define: {
+    'process.env.NODE_ENV': JSON.stringify(mode), // 🛠️ Critical line to fix runtime
+  },
   build: {
     sourcemap: true,
     lib: {
