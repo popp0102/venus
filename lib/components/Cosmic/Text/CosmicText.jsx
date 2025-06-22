@@ -13,7 +13,7 @@ export default function CosmicText({ text, className='', randomColor=false }) {
         let cosmicIndex = (startIndex + index) % numCosmicColors;
 
         return (
-          <span style={{"color": `var(${COSMIC_CSS_COLORS[cosmicIndex]})`}} key={Math.random()}>{char}</span>
+          <span style={{"color": `var(${COSMIC_CSS_COLORS[cosmicIndex]})`}} key={index}>{char}</span>
         );
       })}
     </p>
