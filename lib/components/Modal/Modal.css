@@ -1,0 +1,16 @@
+.dialog-modal {
+  border-radius: 10px;
+  width: 80%;
+  color: white;
+  background: url('assets/images/level-up-background.jpeg');
+  text-align: center;
+  opacity: 0.9;
+  font-size: 0.8rem;
+}
+
+@media(min-width: 40rem) {
+  .dialog-modal {
+    width: 40%;
+    font-size: 1rem;
+  }
+}
